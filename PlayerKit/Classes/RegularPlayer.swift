@@ -48,6 +48,10 @@ extension AVMediaSelectionOption: TextTrackMetadata {
         self.player.replaceCurrentItem(with: playerItem)
     }
     
+    public var getLayer: AVPlayerLayer? {
+        return (view as? RegularPlayerView)?.playerLayer
+    }
+    
     // MARK: ProvidesView
     
     private class RegularPlayerView: UIView {
